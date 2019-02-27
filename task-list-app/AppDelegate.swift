@@ -8,15 +8,27 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let notificationDelegate = UYLNotificationDelegate()
+    
+    var taskItems: [Tasks] = [] //for setting all timers to false on launch
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window?.tintColor = UIColor.darkGray
+    
+        let center = UNUserNotificationCenter.current()
+        center.delegate = notificationDelegate
+        
+        removeAllTimerBools() //consider only using this during development and remove for production
+        
         return true
     }
 
@@ -41,6 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+        print ("terminating")
+        terminateAllActiveTimers()
         self.saveContext()
     }
 
@@ -87,6 +101,79 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func removeAllTimerBools() {
+
+        //1
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        //2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Tasks")
+
+        //3
+        do {
+            taskItems = try context.fetch(fetchRequest) as! [Tasks]
+
+            if taskItems.count > 0 { //only proceed if found any tasks
+                for aTask in taskItems {
+
+                    //MARK: update result
+                    aTask.setValue(false, forKey: "timerIsOn")
+
+                    do {
+
+                        try context.save()
+                        //print("completed save timer bool in core data")
+
+                    } catch let error as NSError {
+                        print("Could not save. \(error), \(error.userInfo)")
+                    }
+                }
+            }
+        } catch let error as NSError {
+            print ("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    func terminateAllActiveTimers() {
+        
+        //1
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let context = appDelegate.persistentContainer.viewContext
+        //2
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Tasks")
+        fetchRequest.predicate = NSPredicate(format: "timerIsOn = YES")
+        //3
+        do {
+            taskItems = try context.fetch(fetchRequest) as! [Tasks]
+            
+            if taskItems.count > 0 { //only proceed if found any tasks
+                for aTask in taskItems {
+                    
+                    //MARK: update result
+                    aTask.setValue(false, forKey: "timerIsOn") //close the timer
+                    aTask.setValue(Date(), forKey: "timerEnd") // set the end time to time of app termination i.e now
+                    
+                    
+                    do {
+                        
+                        try context.save()
+                        print("completed terminating all timers")
+                        
+                    } catch let error as NSError {
+                        print("Could not save. \(error), \(error.userInfo)")
+                    }
+                }
+            }
+        } catch let error as NSError {
+            print ("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
     }
 
 }
