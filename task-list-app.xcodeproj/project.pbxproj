@@ -15,18 +15,14 @@
 		0E045908209FAB6C00B0FFB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E045906209FAB6C00B0FFB6 /* LaunchScreen.storyboard */; };
 		0E045913209FAB6C00B0FFB6 /* task_list_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E045912209FAB6C00B0FFB6 /* task_list_appTests.swift */; };
 		0E04591E209FAB6C00B0FFB6 /* task_list_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04591D209FAB6C00B0FFB6 /* task_list_appUITests.swift */; };
-		0E04592C209FB5AB00B0FFB6 /* ClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04592B209FB5AB00B0FFB6 /* ClientViewController.swift */; };
 		0E04592E209FB5BA00B0FFB6 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04592D209FB5BA00B0FFB6 /* TaskViewController.swift */; };
 		0E045930209FB61000B0FFB6 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04592F209FB61000B0FFB6 /* ListViewController.swift */; };
 		0E045932209FB62B00B0FFB6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E045931209FB62B00B0FFB6 /* DetailViewController.swift */; };
-		0E045934209FB6CF00B0FFB6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E045933209FB6CF00B0FFB6 /* TableViewController.swift */; };
 		0E045936209FB77C00B0FFB6 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E045935209FB77C00B0FFB6 /* ListTableViewCell.swift */; };
 		0E045938209FB78C00B0FFB6 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E045937209FB78C00B0FFB6 /* DetailTableViewCell.swift */; };
-		0E04593B209FBFEE00B0FFB6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04593A209FBFEE00B0FFB6 /* GameViewController.swift */; };
 		0E04593D209FC3FF00B0FFB6 /* CustomSegementControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E04593C209FC3FF00B0FFB6 /* CustomSegementControl.swift */; };
 		0E0BD55720B57CBC00325836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E045904209FAB6C00B0FFB6 /* Assets.xcassets */; };
 		0E1327CC20AB904500149EC5 /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1327CB20AB904500149EC5 /* UserNotifications.swift */; };
-		0E39D40120B41DCD0015B13F /* CaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E39D40020B41DCD0015B13F /* CaptionViewController.swift */; };
 		0E6C92AC214A7B8000CA8013 /* TAFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C92AB214A7B8000CA8013 /* TAFunctions.swift */; };
 		0E6C92AE214A7CBE00CA8013 /* TAAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6C92AD214A7CBE00CA8013 /* TAAlerts.swift */; };
 		0EB161F420B4F53C001A1D15 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB161F320B4F53C001A1D15 /* StoreKit.framework */; };
@@ -65,17 +61,13 @@
 		0E045919209FAB6C00B0FFB6 /* task-list-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "task-list-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E04591D209FAB6C00B0FFB6 /* task_list_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task_list_appUITests.swift; sourceTree = "<group>"; };
 		0E04591F209FAB6C00B0FFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E04592B209FB5AB00B0FFB6 /* ClientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientViewController.swift; sourceTree = "<group>"; };
 		0E04592D209FB5BA00B0FFB6 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		0E04592F209FB61000B0FFB6 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0E045931209FB62B00B0FFB6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		0E045933209FB6CF00B0FFB6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		0E045935209FB77C00B0FFB6 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		0E045937209FB78C00B0FFB6 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
-		0E04593A209FBFEE00B0FFB6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		0E04593C209FC3FF00B0FFB6 /* CustomSegementControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegementControl.swift; sourceTree = "<group>"; };
 		0E1327CB20AB904500149EC5 /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
-		0E39D40020B41DCD0015B13F /* CaptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionViewController.swift; sourceTree = "<group>"; };
 		0E6C92AB214A7B8000CA8013 /* TAFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TAFunctions.swift; path = "task-list-app/Classes/TAFunctions.swift"; sourceTree = SOURCE_ROOT; };
 		0E6C92AD214A7CBE00CA8013 /* TAAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TAAlerts.swift; sourceTree = "<group>"; };
 		0EB161F320B4F53C001A1D15 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -140,10 +132,6 @@
 				0E045931209FB62B00B0FFB6 /* DetailViewController.swift */,
 				0E045939209FB79500B0FFB6 /* cell */,
 				0E045904209FAB6C00B0FFB6 /* Assets.xcassets */,
-				0E04592B209FB5AB00B0FFB6 /* ClientViewController.swift */,
-				0E39D40020B41DCD0015B13F /* CaptionViewController.swift */,
-				0E04593A209FBFEE00B0FFB6 /* GameViewController.swift */,
-				0E045933209FB6CF00B0FFB6 /* TableViewController.swift */,
 				0E045906209FAB6C00B0FFB6 /* LaunchScreen.storyboard */,
 				0E045909209FAB6C00B0FFB6 /* Info.plist */,
 				0E045901209FAB6B00B0FFB6 /* task_list_app.xcdatamodeld */,
@@ -341,18 +329,14 @@
 				0E6C92AE214A7CBE00CA8013 /* TAAlerts.swift in Sources */,
 				0E0458FD209FAB6B00B0FFB6 /* MainViewController.swift in Sources */,
 				0E045930209FB61000B0FFB6 /* ListViewController.swift in Sources */,
-				0E045934209FB6CF00B0FFB6 /* TableViewController.swift in Sources */,
 				0E04592E209FB5BA00B0FFB6 /* TaskViewController.swift in Sources */,
 				0E6C92AC214A7B8000CA8013 /* TAFunctions.swift in Sources */,
-				0E39D40120B41DCD0015B13F /* CaptionViewController.swift in Sources */,
 				0E045936209FB77C00B0FFB6 /* ListTableViewCell.swift in Sources */,
 				0E04593D209FC3FF00B0FFB6 /* CustomSegementControl.swift in Sources */,
 				0E0458FB209FAB6B00B0FFB6 /* AppDelegate.swift in Sources */,
 				0E0077E820BD6D420044D437 /* EKEventsClass.swift in Sources */,
-				0E04592C209FB5AB00B0FFB6 /* ClientViewController.swift in Sources */,
 				0E045938209FB78C00B0FFB6 /* DetailTableViewCell.swift in Sources */,
 				0E1327CC20AB904500149EC5 /* UserNotifications.swift in Sources */,
-				0E04593B209FBFEE00B0FFB6 /* GameViewController.swift in Sources */,
 				0E045932209FB62B00B0FFB6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
